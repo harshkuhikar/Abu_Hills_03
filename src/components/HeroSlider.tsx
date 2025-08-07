@@ -119,17 +119,32 @@ const HeroSlider: React.FC = () => {
                       style={{ animationDelay: "0.6s" }}
                     >
                       <button
-                        className="group bg-gradient-to-r from-luxury-gold to-yellow-500 hover:from-yellow-600 hover:to-luxury-gold text-black px-10 py-5 rounded-full font-bold text-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center space-x-3"
+                        className="group bg-gradient-to-r from-luxury-gold to-yellow-500 hover:from-yellow-600 hover:to-luxury-gold text-black 
+             px-6 py-3 text-base 
+             sm:px-8 sm:py-4 sm:text-lg 
+             md:px-10 md:py-5 md:text-xl 
+             rounded-full font-bold 
+             transition-all duration-300 
+             hover:scale-105 hover:shadow-2xl 
+             flex items-center justify-center space-x-3"
                         onClick={slide.action}
                       >
                         <span>{slide.cta}</span>
-                        <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
+                        <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform duration-300" />
                       </button>
+
                       <button
                         onClick={() => navigate("/contact")}
-                        className="group bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-10 py-5 rounded-full font-bold text-xl transition-all duration-300 hover:bg-white/20 hover:scale-105 flex items-center justify-center space-x-3"
+                        className="group bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white 
+             px-6 py-3 text-base 
+             sm:px-8 sm:py-4 sm:text-lg 
+             md:px-10 md:py-5 md:text-xl 
+             rounded-full font-bold 
+             transition-all duration-300 
+             hover:bg-white/20 hover:scale-105 
+             flex items-center justify-center space-x-3"
                       >
-                        <Phone className="w-6 h-6" />
+                        <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                         <span>Contact Agent</span>
                       </button>
                     </div>
@@ -142,11 +157,26 @@ const HeroSlider: React.FC = () => {
       </Swiper>
 
       {/* Custom Navigation */}
-      <div className="swiper-button-prev-custom absolute left-8 top-1/2 transform -translate-y-1/2 z-10 w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-all duration-300 hover:scale-110">
-        <ChevronDown className="w-8 h-8 text-white rotate-90" />
+      <div
+        className="swiper-button-prev-custom absolute left-4 top-1/2 transform -translate-y-1/2 z-10 
+                w-10 h-10 
+                md:w-16 md:h-16 
+                bg-white/20 backdrop-blur-sm rounded-full 
+                flex items-center justify-center cursor-pointer 
+                hover:bg-white/30 transition-all duration-300 hover:scale-110"
+      >
+        <ChevronDown className="w-5 h-5 md:w-8 md:h-8 text-white rotate-90" />
       </div>
-      <div className="swiper-button-next-custom absolute right-8 top-1/2 transform -translate-y-1/2 z-10 w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-all duration-300 hover:scale-110">
-        <ChevronDown className="w-8 h-8 text-white -rotate-90" />
+
+      <div
+        className="swiper-button-next-custom absolute right-4 top-1/2 transform -translate-y-1/2 z-10 
+                w-10 h-10 
+                md:w-16 md:h-16 
+                bg-white/20 backdrop-blur-sm rounded-full 
+                flex items-center justify-center cursor-pointer 
+                hover:bg-white/30 transition-all duration-300 hover:scale-110"
+      >
+        <ChevronDown className="w-5 h-5 md:w-8 md:h-8 text-white -rotate-90" />
       </div>
 
       {/* Scroll Down Indicator */}
