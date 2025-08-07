@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
                       : "text-luxury-gold bg-white/25 shadow-lg"
                     : isScrolled
                       ? "text-gray-700 hover:text-luxury-gold hover:bg-luxury-gold/10"
-                      : "text-white hover:text-luxury-gold hover:bg-white/20"
+                      : "text-black hover:text-luxury-gold hover:bg-luxury-gold/15"
                 }`}
               >
                 <Icon size={20} />
