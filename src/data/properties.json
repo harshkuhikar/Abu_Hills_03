@@ -269,9 +269,10 @@
     "propertyTax": "$45,000/year",
     "hoaFees": "N/A",
     "images": [
-      "https://images.pexels.com/photos/1396125/pexels-photo-1396125.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1200"
+      "/Abu_Photos/Abu_03.jpg",
+      "/Abu_Photos/Abu_04.jpg",
+      "/Abu_Photos/Abu_01.jpg",
+      "/Abu_Photos/Abu_02.jpg"
     ],
     "features": [
       "Private elevator",
