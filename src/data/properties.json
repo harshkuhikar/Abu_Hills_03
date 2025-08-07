@@ -17,10 +17,10 @@
     "propertyTax": "$25,000/year",
     "hoaFees": "$1,200/month",
     "images": [
-      "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      "https://images.pexels.com/photos/2121121/pexels-photo-2121121.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=1200"
+      "/Abu_Photos/Abu_01.jpg",
+      "/Abu_Photos/Abu_02.jpg",
+      "/Abu_Photos/Abu_03.jpg",
+      "/Abu_Photos/Abu_04.jpg"
     ],
     "features": [
       "Premium marble flooring throughout",
@@ -38,8 +38,16 @@
     ],
     "nearbyPlaces": [
       { "name": "Central Park", "distance": "0.3 miles", "type": "Park" },
-      { "name": "Metropolitan Museum", "distance": "0.5 miles", "type": "Museum" },
-      { "name": "Whole Foods Market", "distance": "0.2 miles", "type": "Grocery" }
+      {
+        "name": "Metropolitan Museum",
+        "distance": "0.5 miles",
+        "type": "Museum"
+      },
+      {
+        "name": "Whole Foods Market",
+        "distance": "0.2 miles",
+        "type": "Grocery"
+      }
     ]
   },
   {
@@ -60,9 +68,10 @@
     "propertyTax": "$12,000/year",
     "hoaFees": "N/A",
     "images": [
-      "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=1200"
+      "/Abu_Photos/Abu_02.jpg",
+      "/Abu_Photos/Abu_03.jpg",
+      "/Abu_Photos/Abu_04.jpg",
+      "/Abu_Photos/Abu_01.jpg"
     ],
     "features": [
       "Open floor plan design",
@@ -100,8 +109,10 @@
     "propertyTax": "N/A",
     "hoaFees": "$200/month",
     "images": [
-      "https://images.pexels.com/photos/2121121/pexels-photo-2121121.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      "https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=1200"
+      "/Abu_Photos/Abu_03.jpg",
+      "/Abu_Photos/Abu_04.jpg",
+      "/Abu_Photos/Abu_01.jpg",
+      "/Abu_Photos/Abu_02.jpg"
     ],
     "features": [
       "Open studio layout",
@@ -137,8 +148,10 @@
     "propertyTax": "N/A",
     "hoaFees": "$300/month",
     "images": [
-      "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=1200"
+      "/Abu_Photos/Abu_04.jpg",
+      "/Abu_Photos/Abu_01.jpg",
+      "/Abu_Photos/Abu_02.jpg",
+      "/Abu_Photos/Abu_03.jpg"
     ],
     "features": [
       "Exposed brick walls",
@@ -190,7 +203,11 @@
     ],
     "nearbyPlaces": [
       { "name": "Prospect Park", "distance": "0.2 miles", "type": "Park" },
-      { "name": "7th Avenue Shops", "distance": "0.3 miles", "type": "Shopping" }
+      {
+        "name": "7th Avenue Shops",
+        "distance": "0.3 miles",
+        "type": "Shopping"
+      }
     ]
   },
   {
@@ -226,7 +243,11 @@
       { "name": "Modern Building", "description": "2021 Construction" }
     ],
     "nearbyPlaces": [
-      { "name": "Court Square Station", "distance": "0.2 miles", "type": "Subway" },
+      {
+        "name": "Court Square Station",
+        "distance": "0.2 miles",
+        "type": "Subway"
+      },
       { "name": "Gantry Plaza Park", "distance": "0.4 miles", "type": "Park" }
     ]
   },
@@ -265,7 +286,11 @@
     ],
     "nearbyPlaces": [
       { "name": "Central Park", "distance": "0.1 miles", "type": "Park" },
-      { "name": "Metropolitan Museum", "distance": "0.3 miles", "type": "Museum" }
+      {
+        "name": "Metropolitan Museum",
+        "distance": "0.3 miles",
+        "type": "Museum"
+      }
     ]
   },
   {
@@ -338,7 +363,11 @@
       { "name": "Fitness Center", "description": "State-of-the-art Gym" }
     ],
     "nearbyPlaces": [
-      { "name": "Times Square", "distance": "0.3 miles", "type": "Entertainment" },
+      {
+        "name": "Times Square",
+        "distance": "0.3 miles",
+        "type": "Entertainment"
+      },
       { "name": "Bryant Park", "distance": "0.2 miles", "type": "Park" }
     ]
   },

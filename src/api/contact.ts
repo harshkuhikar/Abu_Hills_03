@@ -2,13 +2,13 @@
 // This file demonstrates the structure for the contact form API
 // In a real application, this would be implemented as a server-side API route
 
-import { Resend } from 'resend';
+import { Resend } from "resend";
 
 // Configuration - these should be environment variables in production
 const RESEND_CONFIG = {
-  apiKey: process.env.RESEND_API_KEY || 'your-resend-api-key-here',
-  fromEmail: 'noreply@abuhills.com',
-  toEmail: 'info@abuhills.com',
+  apiKey: process.env.RESEND_API_KEY || "re_22KBkv8y_6KazrsZegojXiVXqYGjsf6Za",
+  fromEmail: "noreply@abuhills.com",
+  toEmail: "harshkuhikar68@gmail.com",
 };
 
 // Initialize Resend client
@@ -28,8 +28,13 @@ interface ContactFormData {
 export async function sendContactEmail(formData: ContactFormData) {
   try {
     // Validate required fields
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-      throw new Error('Missing required fields');
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.subject ||
+      !formData.message
+    ) {
+      throw new Error("Missing required fields");
     }
 
     // Create email content
@@ -52,28 +57,40 @@ export async function sendContactEmail(formData: ContactFormData) {
                 <td style="padding: 8px 0; color: #666; font-weight: bold;">Email:</td>
                 <td style="padding: 8px 0; color: #333;">${formData.email}</td>
               </tr>
-              ${formData.phone ? `
+              ${
+                formData.phone
+                  ? `
               <tr>
                 <td style="padding: 8px 0; color: #666; font-weight: bold;">Phone:</td>
                 <td style="padding: 8px 0; color: #333;">${formData.phone}</td>
               </tr>
-              ` : ''}
+              `
+                  : ""
+              }
               <tr>
                 <td style="padding: 8px 0; color: #666; font-weight: bold;">Subject:</td>
                 <td style="padding: 8px 0; color: #333;">${formData.subject}</td>
               </tr>
-              ${formData.propertyType ? `
+              ${
+                formData.propertyType
+                  ? `
               <tr>
                 <td style="padding: 8px 0; color: #666; font-weight: bold;">Property Type:</td>
                 <td style="padding: 8px 0; color: #333;">${formData.propertyType}</td>
               </tr>
-              ` : ''}
-              ${formData.budget ? `
+              `
+                  : ""
+              }
+              ${
+                formData.budget
+                  ? `
               <tr>
                 <td style="padding: 8px 0; color: #666; font-weight: bold;">Budget:</td>
                 <td style="padding: 8px 0; color: #333;">${formData.budget}</td>
               </tr>
-              ` : ''}
+              `
+                  : ""
+              }
               <tr>
                 <td style="padding: 8px 0; color: #666; font-weight: bold;">Submitted:</td>
                 <td style="padding: 8px 0; color: #333;">${new Date(formData.timestamp).toLocaleString()}</td>
@@ -151,42 +168,44 @@ export async function sendContactEmail(formData: ContactFormData) {
     await resend.emails.send({
       from: RESEND_CONFIG.fromEmail,
       to: formData.email,
-      subject: 'Thank you for contacting Abu Hills Real Estate',
+      subject: "Thank you for contacting Abu Hills Real Estate",
       html: confirmationEmail,
     });
 
     return {
       success: true,
-      message: 'Email sent successfully',
+      message: "Email sent successfully",
       data: result,
     };
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error("Error sending email:", error);
     return {
       success: false,
-      message: 'Failed to send email',
-      error: error instanceof Error ? error.message : 'Unknown error',
+      message: "Failed to send email",
+      error: error instanceof Error ? error.message : "Unknown error",
     };
   }
 }
 
 // Example API route handler (for Next.js API routes or similar)
 export async function handleContactForm(req: any, res: any) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' });
+  if (req.method !== "POST") {
+    return res.status(405).json({ message: "Method not allowed" });
   }
 
   try {
     const result = await sendContactEmail(req.body);
-    
+
     if (result.success) {
-      return res.status(200).json({ message: 'Message sent successfully' });
+      return res.status(200).json({ message: "Message sent successfully" });
     } else {
-      return res.status(500).json({ message: result.message, error: result.error });
+      return res
+        .status(500)
+        .json({ message: result.message, error: result.error });
     }
   } catch (error) {
-    console.error('Contact form error:', error);
-    return res.status(500).json({ message: 'Internal server error' });
+    console.error("Contact form error:", error);
+    return res.status(500).json({ message: "Internal server error" });
   }
 }
 

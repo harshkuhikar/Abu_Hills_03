@@ -1,11 +1,24 @@
-import React, { useState } from 'react';
-import { X, MapPin, Bed, Bath, Square, Car, ChevronLeft, ChevronRight, Calendar, Building, DollarSign, Home } from 'lucide-react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay, Thumbs } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/thumbs';
+import React, { useState } from "react";
+import {
+  X,
+  MapPin,
+  Bed,
+  Bath,
+  Square,
+  Car,
+  ChevronLeft,
+  ChevronRight,
+  Calendar,
+  Building,
+  DollarSign,
+  Home,
+} from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay, Thumbs } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/thumbs";
 
 interface Property {
   id: number;
@@ -36,32 +49,38 @@ interface PropertyModalProps {
   onClose: () => void;
 }
 
-const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose }) => {
+const PropertyModal: React.FC<PropertyModalProps> = ({
+  property,
+  isOpen,
+  onClose,
+}) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const handleInquirySubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     const formData = new FormData(e.currentTarget);
     const inquiryData = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      phone: formData.get('phone'),
-      message: formData.get('message'),
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      message: formData.get("message"),
       propertyId: property?.id,
-      propertyTitle: property?.title
+      propertyTitle: property?.title,
     };
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      console.log('Inquiry submitted:', inquiryData);
-      setSubmitStatus('success');
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      console.log("Inquiry submitted:", inquiryData);
+      setSubmitStatus("success");
       (e.target as HTMLFormElement).reset();
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -72,11 +91,11 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">
       {/* Backdrop */}
-      <div 
+      <div
         className="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300"
         onClick={onClose}
       />
-      
+
       {/* Modal */}
       <div className="relative min-h-screen flex items-center justify-center p-4">
         <div className="relative bg-white rounded-3xl shadow-2xl max-w-7xl w-full max-h-[95vh] overflow-hidden animate-scale-in">
@@ -94,13 +113,15 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
               <Swiper
                 modules={[Navigation, Pagination, Autoplay, Thumbs]}
                 navigation={{
-                  nextEl: '.swiper-button-next-custom',
-                  prevEl: '.swiper-button-prev-custom',
+                  nextEl: ".swiper-button-next-custom",
+                  prevEl: ".swiper-button-prev-custom",
                 }}
-                pagination={{ 
+                pagination={{
                   clickable: true,
-                  bulletClass: 'swiper-pagination-bullet !bg-luxury-gold !opacity-60',
-                  bulletActiveClass: 'swiper-pagination-bullet-active !opacity-100'
+                  bulletClass:
+                    "swiper-pagination-bullet !bg-luxury-gold !opacity-60",
+                  bulletActiveClass:
+                    "swiper-pagination-bullet-active !opacity-100",
                 }}
                 autoplay={{ delay: 5000 }}
                 thumbs={{ swiper: thumbsSwiper }}
@@ -118,7 +139,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
                   </SwiperSlide>
                 ))}
               </Swiper>
-              
+
               {/* Custom Navigation */}
               <div className="swiper-button-prev-custom absolute left-6 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-black/60 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-black/80 transition-all duration-300">
                 <ChevronLeft className="w-6 h-6 text-white" />
@@ -151,7 +172,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
                 breakpoints={{
                   640: { slidesPerView: 6 },
                   768: { slidesPerView: 8 },
-                  1024: { slidesPerView: 10 }
+                  1024: { slidesPerView: 10 },
                 }}
                 className="thumbnail-slider"
               >
@@ -179,7 +200,9 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
                     </h1>
                     <div className="flex items-center text-gray-600 mb-6">
                       <MapPin className="w-6 h-6 mr-3 text-luxury-gold" />
-                      <span className="text-xl font-medium">{property.location}</span>
+                      <span className="text-xl font-medium">
+                        {property.location}
+                      </span>
                     </div>
                   </div>
 
@@ -187,29 +210,39 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-6 bg-gradient-to-r from-luxury-gold/10 to-yellow-500/10 rounded-2xl">
                     <div className="text-center">
                       <Bed className="w-8 h-8 text-luxury-gold mx-auto mb-2" />
-                      <div className="text-2xl font-bold text-gray-900">{property.bedrooms}</div>
+                      <div className="text-2xl font-bold text-gray-900">
+                        {property.bedrooms}
+                      </div>
                       <div className="text-gray-600 font-medium">Bedrooms</div>
                     </div>
                     <div className="text-center">
                       <Bath className="w-8 h-8 text-luxury-gold mx-auto mb-2" />
-                      <div className="text-2xl font-bold text-gray-900">{property.bathrooms}</div>
+                      <div className="text-2xl font-bold text-gray-900">
+                        {property.bathrooms}
+                      </div>
                       <div className="text-gray-600 font-medium">Bathrooms</div>
                     </div>
                     <div className="text-center">
                       <Square className="w-8 h-8 text-luxury-gold mx-auto mb-2" />
-                      <div className="text-2xl font-bold text-gray-900">{property.area}</div>
+                      <div className="text-2xl font-bold text-gray-900">
+                        {property.area}
+                      </div>
                       <div className="text-gray-600 font-medium">Area</div>
                     </div>
                     <div className="text-center">
                       <Car className="w-8 h-8 text-luxury-gold mx-auto mb-2" />
-                      <div className="text-2xl font-bold text-gray-900">{property.parking}</div>
+                      <div className="text-2xl font-bold text-gray-900">
+                        {property.parking}
+                      </div>
                       <div className="text-gray-600 font-medium">Parking</div>
                     </div>
                   </div>
 
                   {/* Description */}
                   <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4">Description</h3>
+                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4">
+                      Description
+                    </h3>
                     <p className="text-gray-600 leading-relaxed text-lg">
                       {property.description}
                     </p>
@@ -217,52 +250,78 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
 
                   {/* Property Details */}
                   <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6">Property Details</h3>
+                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6">
+                      Property Details
+                    </h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-4">
                         <div className="flex items-center justify-between py-3 border-b border-gray-200">
                           <div className="flex items-center">
                             <Home className="w-5 h-5 text-luxury-gold mr-3" />
-                            <span className="font-semibold text-gray-700">Property Type</span>
+                            <span className="font-semibold text-gray-700">
+                              Property Type
+                            </span>
                           </div>
-                          <span className="text-gray-900">{property.category}</span>
+                          <span className="text-gray-900">
+                            {property.category}
+                          </span>
                         </div>
                         <div className="flex items-center justify-between py-3 border-b border-gray-200">
                           <div className="flex items-center">
                             <Calendar className="w-5 h-5 text-luxury-gold mr-3" />
-                            <span className="font-semibold text-gray-700">Year Built</span>
+                            <span className="font-semibold text-gray-700">
+                              Year Built
+                            </span>
                           </div>
-                          <span className="text-gray-900">{property.yearBuilt}</span>
+                          <span className="text-gray-900">
+                            {property.yearBuilt}
+                          </span>
                         </div>
                         <div className="flex items-center justify-between py-3 border-b border-gray-200">
                           <div className="flex items-center">
                             <Square className="w-5 h-5 text-luxury-gold mr-3" />
-                            <span className="font-semibold text-gray-700">Lot Size</span>
+                            <span className="font-semibold text-gray-700">
+                              Lot Size
+                            </span>
                           </div>
-                          <span className="text-gray-900">{property.lotSize}</span>
+                          <span className="text-gray-900">
+                            {property.lotSize}
+                          </span>
                         </div>
                       </div>
                       <div className="space-y-4">
                         <div className="flex items-center justify-between py-3 border-b border-gray-200">
                           <div className="flex items-center">
                             <DollarSign className="w-5 h-5 text-luxury-gold mr-3" />
-                            <span className="font-semibold text-gray-700">Property Tax</span>
+                            <span className="font-semibold text-gray-700">
+                              Property Tax
+                            </span>
                           </div>
-                          <span className="text-gray-900">{property.propertyTax}</span>
+                          <span className="text-gray-900">
+                            {property.propertyTax}
+                          </span>
                         </div>
                         <div className="flex items-center justify-between py-3 border-b border-gray-200">
                           <div className="flex items-center">
                             <Building className="w-5 h-5 text-luxury-gold mr-3" />
-                            <span className="font-semibold text-gray-700">HOA Fees</span>
+                            <span className="font-semibold text-gray-700">
+                              HOA Fees
+                            </span>
                           </div>
-                          <span className="text-gray-900">{property.hoaFees}</span>
+                          <span className="text-gray-900">
+                            {property.hoaFees}
+                          </span>
                         </div>
                         <div className="flex items-center justify-between py-3 border-b border-gray-200">
                           <div className="flex items-center">
                             <Home className="w-5 h-5 text-luxury-gold mr-3" />
-                            <span className="font-semibold text-gray-700">Listing Type</span>
+                            <span className="font-semibold text-gray-700">
+                              Listing Type
+                            </span>
                           </div>
-                          <span className="text-gray-900">For {property.type}</span>
+                          <span className="text-gray-900">
+                            For {property.type}
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -270,12 +329,19 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
 
                   {/* Features */}
                   <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6">Key Features</h3>
+                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6">
+                      Key Features
+                    </h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       {property.features.map((feature, index) => (
-                        <div key={index} className="flex items-center space-x-3 p-3 bg-gray-50 rounded-xl hover:bg-luxury-gold/10 transition-colors duration-300">
+                        <div
+                          key={index}
+                          className="flex items-center space-x-3 p-3 bg-gray-50 rounded-xl hover:bg-luxury-gold/10 transition-colors duration-300"
+                        >
                           <div className="w-2 h-2 bg-luxury-gold rounded-full flex-shrink-0" />
-                          <span className="text-gray-700 font-medium">{feature}</span>
+                          <span className="text-gray-700 font-medium">
+                            {feature}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -283,16 +349,25 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
 
                   {/* Amenities */}
                   <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6">Amenities</h3>
+                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6">
+                      Amenities
+                    </h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       {property.amenities.map((amenity, index) => (
-                        <div key={index} className="flex items-start space-x-4 p-4 bg-gradient-to-br from-luxury-gold/10 to-yellow-500/5 rounded-2xl hover:shadow-md transition-all duration-300">
+                        <div
+                          key={index}
+                          className="flex items-start space-x-4 p-4 bg-gradient-to-br from-luxury-gold/10 to-yellow-500/5 rounded-2xl hover:shadow-md transition-all duration-300"
+                        >
                           <div className="w-12 h-12 bg-luxury-gold/20 rounded-xl flex items-center justify-center flex-shrink-0">
                             <div className="w-6 h-6 bg-luxury-gold rounded-full" />
                           </div>
                           <div>
-                            <h4 className="font-semibold text-gray-900 mb-1">{amenity.name}</h4>
-                            <p className="text-gray-600 text-sm">{amenity.description}</p>
+                            <h4 className="font-semibold text-gray-900 mb-1">
+                              {amenity.name}
+                            </h4>
+                            <p className="text-gray-600 text-sm">
+                              {amenity.description}
+                            </p>
                           </div>
                         </div>
                       ))}
@@ -301,15 +376,26 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
 
                   {/* Nearby Places */}
                   <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6">Nearby Places</h3>
+                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6">
+                      Nearby Places
+                    </h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       {property.nearbyPlaces.map((place, index) => (
-                        <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-luxury-gold/10 transition-colors duration-300">
+                        <div
+                          key={index}
+                          className="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-luxury-gold/10 transition-colors duration-300"
+                        >
                           <div>
-                            <h4 className="font-semibold text-gray-900">{place.name}</h4>
-                            <p className="text-gray-600 text-sm">{place.type}</p>
+                            <h4 className="font-semibold text-gray-900">
+                              {place.name}
+                            </h4>
+                            <p className="text-gray-600 text-sm">
+                              {place.type}
+                            </p>
                           </div>
-                          <span className="text-luxury-gold font-semibold">{place.distance}</span>
+                          <span className="text-luxury-gold font-semibold">
+                            {place.distance}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -319,18 +405,26 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
                 {/* Sidebar */}
                 <div className="space-y-8">
                   {/* Contact Form */}
-                  <div className="bg-gradient-to-br from-luxury-gold/10 to-yellow-500/5 rounded-2xl p-8 shadow-lg border border-luxury-gold/20 sticky top-8">
-                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6">Interested in this property?</h3>
-                    
-                    {submitStatus === 'success' && (
+                  <div className="bg-gradient-to-br from-luxury-gold/10 to-yellow-500/5 rounded-2xl p-4 shadow-lg border border-luxury-gold/20 sticky top-8">
+                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6">
+                      Interested in this property?
+                    </h3>
+
+                    {submitStatus === "success" && (
                       <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-6 animate-slide-up">
-                        <p className="text-green-800">Thank you! Your inquiry has been sent successfully. We'll get back to you within 24 hours.</p>
+                        <p className="text-green-800">
+                          Thank you! Your inquiry has been sent successfully.
+                          We'll get back to you within 24 hours.
+                        </p>
                       </div>
                     )}
 
-                    {submitStatus === 'error' && (
+                    {submitStatus === "error" && (
                       <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-6 animate-slide-up">
-                        <p className="text-red-800">Sorry, there was an error sending your inquiry. Please try again.</p>
+                        <p className="text-red-800">
+                          Sorry, there was an error sending your inquiry. Please
+                          try again.
+                        </p>
                       </div>
                     )}
 
@@ -374,42 +468,55 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
                             <span>Sending...</span>
                           </div>
                         ) : (
-                          'Send Inquiry'
+                          "Send Inquiry"
                         )}
                       </button>
                     </form>
-                  </div>
-
-                  {/* Agent Info */}
-                  <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                    <h4 className="text-xl font-serif font-bold text-gray-900 mb-6">Your Agent</h4>
-                    <div className="flex items-center space-x-4 mb-6">
-                      <img
-                        src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=100"
-                        alt="Agent"
-                        className="w-16 h-16 rounded-full object-cover"
-                      />
-                      <div>
-                        <h5 className="font-bold text-gray-900">Ahmed Al-Mansouri</h5>
-                        <p className="text-gray-600">Senior Property Advisor</p>
-                        <div className="flex items-center mt-1">
-                          <span className="text-luxury-gold text-sm">★★★★★</span>
-                          <span className="text-gray-500 text-sm ml-2">(4.9/5)</span>
+                    {/* Agent Info */}
+                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 mt-6">
+                      <h4 className="text-xl font-serif font-bold text-gray-900 mb-6">
+                        Your Agent
+                      </h4>
+                      <div className="flex items-center space-x-4 mb-6">
+                        <img
+                          src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=100"
+                          alt="Agent"
+                          className="w-16 h-16 rounded-full object-cover"
+                        />
+                        <div>
+                          <h5 className="font-bold text-gray-900">
+                            Ahmed Al-Mansouri
+                          </h5>
+                          <p className="text-gray-600">
+                            Senior Property Advisor
+                          </p>
+                          <div className="flex items-center mt-1">
+                            <span className="text-luxury-gold text-sm">
+                              ★★★★★
+                            </span>
+                            <span className="text-gray-500 text-sm ml-2">
+                              (4.9/5)
+                            </span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="space-y-3 text-sm">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-luxury-gold/20 rounded-full flex items-center justify-center">
-                          <span className="text-luxury-gold">📞</span>
+                      <div className="space-y-3 text-sm">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-luxury-gold/20 rounded-full flex items-center justify-center">
+                            <span className="text-luxury-gold">📞</span>
+                          </div>
+                          <span className="text-gray-700">
+                            +971 50 123 4567
+                          </span>
                         </div>
-                        <span className="text-gray-700">+971 50 123 4567</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-luxury-gold/20 rounded-full flex items-center justify-center">
-                          <span className="text-luxury-gold">✉️</span>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-luxury-gold/20 rounded-full flex items-center justify-center">
+                            <span className="text-luxury-gold">✉️</span>
+                          </div>
+                          <span className="text-gray-700">
+                            ahmed@abuhills.com
+                          </span>
                         </div>
-                        <span className="text-gray-700">ahmed@abuhills.com</span>
                       </div>
                     </div>
                   </div>
