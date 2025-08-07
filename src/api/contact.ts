@@ -7,7 +7,7 @@ import { Resend } from "resend";
 // Configuration - these should be environment variables in production
 const RESEND_CONFIG = {
   apiKey: process.env.RESEND_API_KEY || "re_22KBkv8y_6KazrsZegojXiVXqYGjsf6Za",
-  fromEmail: "noreply@abuhills.com",
+  fromEmail: "harshkuhikar68@gmail.com",
   toEmail: "harshkuhikar68@gmail.com",
 };
 
