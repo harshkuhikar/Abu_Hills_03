@@ -1,0 +1,384 @@
+[
+  {
+    "id": 1,
+    "title": "Luxury Downtown Penthouse with Panoramic Views",
+    "price": "$2,500,000",
+    "location": "Manhattan, NY",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": "2,500 sq ft",
+    "type": "Sale",
+    "category": "Penthouse",
+    "featured": true,
+    "description": "Experience luxury living at its finest in this stunning penthouse featuring floor-to-ceiling windows, premium finishes, and breathtaking city views. This exceptional property offers an open-concept design with high-end appliances, marble countertops, and custom millwork throughout.",
+    "yearBuilt": 2020,
+    "parking": 2,
+    "lotSize": "N/A",
+    "propertyTax": "$25,000/year",
+    "hoaFees": "$1,200/month",
+    "images": [
+      "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/2121121/pexels-photo-2121121.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    ],
+    "features": [
+      "Premium marble flooring throughout",
+      "Central air conditioning & heating",
+      "Built-in wardrobes in all bedrooms",
+      "Gourmet kitchen with premium appliances",
+      "Private balcony with panoramic views",
+      "Smart home automation system"
+    ],
+    "amenities": [
+      { "name": "Private Parking", "description": "2 Covered Spaces" },
+      { "name": "High-Speed Internet", "description": "Fiber Optic Ready" },
+      { "name": "Fitness Center", "description": "24/7 Access" },
+      { "name": "Swimming Pool", "description": "Rooftop Pool & Spa" }
+    ],
+    "nearbyPlaces": [
+      { "name": "Central Park", "distance": "0.3 miles", "type": "Park" },
+      { "name": "Metropolitan Museum", "distance": "0.5 miles", "type": "Museum" },
+      { "name": "Whole Foods Market", "distance": "0.2 miles", "type": "Grocery" }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Modern Family Home with Garden",
+    "price": "$850,000",
+    "location": "Brooklyn, NY",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "area": "3,200 sq ft",
+    "type": "Sale",
+    "category": "Family Home",
+    "featured": false,
+    "description": "Beautiful modern family home featuring an open floor plan, gourmet kitchen, and private backyard garden. Perfect for families seeking comfort and style in a quiet neighborhood setting.",
+    "yearBuilt": 2018,
+    "parking": 2,
+    "lotSize": "0.25 acres",
+    "propertyTax": "$12,000/year",
+    "hoaFees": "N/A",
+    "images": [
+      "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    ],
+    "features": [
+      "Open floor plan design",
+      "Gourmet kitchen with island",
+      "Private backyard garden",
+      "Master suite with walk-in closet",
+      "Hardwood floors throughout",
+      "Two-car garage"
+    ],
+    "amenities": [
+      { "name": "Private Garden", "description": "Landscaped Backyard" },
+      { "name": "Garage Parking", "description": "2-Car Garage" },
+      { "name": "Modern Kitchen", "description": "Premium Appliances" }
+    ],
+    "nearbyPlaces": [
+      { "name": "Prospect Park", "distance": "0.4 miles", "type": "Park" },
+      { "name": "Brooklyn Museum", "distance": "0.6 miles", "type": "Museum" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Cozy Studio Apartment in Prime Location",
+    "price": "$3,200/month",
+    "location": "Queens, NY",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "area": "650 sq ft",
+    "type": "Rent",
+    "category": "Studio",
+    "featured": false,
+    "description": "Charming studio apartment in a prime location with modern amenities and easy access to transportation. Perfect for young professionals or students.",
+    "yearBuilt": 2019,
+    "parking": 1,
+    "lotSize": "N/A",
+    "propertyTax": "N/A",
+    "hoaFees": "$200/month",
+    "images": [
+      "https://images.pexels.com/photos/2121121/pexels-photo-2121121.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    ],
+    "features": [
+      "Open studio layout",
+      "Modern kitchen appliances",
+      "Large windows with natural light",
+      "Hardwood floors",
+      "In-unit washer/dryer"
+    ],
+    "amenities": [
+      { "name": "Laundry", "description": "In-Unit W/D" },
+      { "name": "Parking", "description": "1 Space Included" }
+    ],
+    "nearbyPlaces": [
+      { "name": "Queens Plaza", "distance": "0.1 miles", "type": "Subway" },
+      { "name": "Local Market", "distance": "0.2 miles", "type": "Grocery" }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Spacious Industrial Loft",
+    "price": "$4,500/month",
+    "location": "SoHo, NY",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": "1,800 sq ft",
+    "type": "Rent",
+    "category": "Loft",
+    "featured": true,
+    "description": "Stunning industrial loft with exposed brick walls, high ceilings, and modern amenities. Located in the heart of SoHo's artistic district.",
+    "yearBuilt": 1920,
+    "parking": 0,
+    "lotSize": "N/A",
+    "propertyTax": "N/A",
+    "hoaFees": "$300/month",
+    "images": [
+      "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    ],
+    "features": [
+      "Exposed brick walls",
+      "High ceilings (14 feet)",
+      "Large industrial windows",
+      "Polished concrete floors",
+      "Modern kitchen with island"
+    ],
+    "amenities": [
+      { "name": "Historic Building", "description": "1920s Architecture" },
+      { "name": "Art District", "description": "SoHo Location" }
+    ],
+    "nearbyPlaces": [
+      { "name": "SoHo Galleries", "distance": "0.1 miles", "type": "Art" },
+      { "name": "Designer Shops", "distance": "0.2 miles", "type": "Shopping" }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Victorian House with Historic Charm",
+    "price": "$1,200,000",
+    "location": "Park Slope, NY",
+    "bedrooms": 5,
+    "bathrooms": 3,
+    "area": "4,000 sq ft",
+    "type": "Sale",
+    "category": "Victorian",
+    "featured": false,
+    "description": "Beautifully preserved Victorian house with original details, modern updates, and a charming garden. Located in the prestigious Park Slope neighborhood.",
+    "yearBuilt": 1895,
+    "parking": 1,
+    "lotSize": "0.15 acres",
+    "propertyTax": "$18,000/year",
+    "hoaFees": "N/A",
+    "images": [
+      "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/1396125/pexels-photo-1396125.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    ],
+    "features": [
+      "Original Victorian details",
+      "Restored hardwood floors",
+      "Period fireplaces",
+      "Modern kitchen renovation",
+      "Private garden"
+    ],
+    "amenities": [
+      { "name": "Historic Character", "description": "1895 Victorian" },
+      { "name": "Private Garden", "description": "Landscaped Yard" }
+    ],
+    "nearbyPlaces": [
+      { "name": "Prospect Park", "distance": "0.2 miles", "type": "Park" },
+      { "name": "7th Avenue Shops", "distance": "0.3 miles", "type": "Shopping" }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Modern Condo with City Views",
+    "price": "$2,800/month",
+    "location": "Long Island City, NY",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": "1,200 sq ft",
+    "type": "Rent",
+    "category": "Condo",
+    "featured": false,
+    "description": "Contemporary condo with stunning city views, modern amenities, and convenient location. Perfect for professionals working in Manhattan.",
+    "yearBuilt": 2021,
+    "parking": 1,
+    "lotSize": "N/A",
+    "propertyTax": "N/A",
+    "hoaFees": "$400/month",
+    "images": [
+      "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    ],
+    "features": [
+      "Floor-to-ceiling windows",
+      "Manhattan skyline views",
+      "Modern kitchen with quartz counters",
+      "In-unit washer/dryer",
+      "Balcony access"
+    ],
+    "amenities": [
+      { "name": "City Views", "description": "Manhattan Skyline" },
+      { "name": "Modern Building", "description": "2021 Construction" }
+    ],
+    "nearbyPlaces": [
+      { "name": "Court Square Station", "distance": "0.2 miles", "type": "Subway" },
+      { "name": "Gantry Plaza Park", "distance": "0.4 miles", "type": "Park" }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Luxury Townhouse with Private Garden",
+    "price": "$3,800,000",
+    "location": "Upper East Side, NY",
+    "bedrooms": 6,
+    "bathrooms": 4,
+    "area": "5,500 sq ft",
+    "type": "Sale",
+    "category": "Townhouse",
+    "featured": true,
+    "description": "Magnificent townhouse offering the ultimate in luxury living with private garden, elevator, and premium finishes throughout. Located on a prestigious tree-lined street.",
+    "yearBuilt": 1910,
+    "parking": 2,
+    "lotSize": "0.12 acres",
+    "propertyTax": "$45,000/year",
+    "hoaFees": "N/A",
+    "images": [
+      "https://images.pexels.com/photos/1396125/pexels-photo-1396125.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    ],
+    "features": [
+      "Private elevator",
+      "Chef's kitchen with butler's pantry",
+      "Master suite with dressing room",
+      "Private garden and terrace",
+      "Original architectural details"
+    ],
+    "amenities": [
+      { "name": "Private Elevator", "description": "4-Stop Elevator" },
+      { "name": "Garden & Terrace", "description": "Private Outdoor Space" }
+    ],
+    "nearbyPlaces": [
+      { "name": "Central Park", "distance": "0.1 miles", "type": "Park" },
+      { "name": "Metropolitan Museum", "distance": "0.3 miles", "type": "Museum" }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Charming Brownstone with Original Details",
+    "price": "$1,800,000",
+    "location": "Fort Greene, NY",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "area": "3,500 sq ft",
+    "type": "Sale",
+    "category": "Brownstone",
+    "featured": false,
+    "description": "Beautifully maintained brownstone with original details, modern updates, and a lovely garden. Perfect blend of historic charm and contemporary comfort.",
+    "yearBuilt": 1885,
+    "parking": 0,
+    "lotSize": "0.08 acres",
+    "propertyTax": "$22,000/year",
+    "hoaFees": "N/A",
+    "images": [
+      "https://images.pexels.com/photos/1396126/pexels-photo-1396126.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    ],
+    "features": [
+      "Original brownstone facade",
+      "Restored hardwood floors",
+      "Decorative fireplaces",
+      "Updated kitchen",
+      "Garden level apartment"
+    ],
+    "amenities": [
+      { "name": "Historic Character", "description": "1885 Brownstone" },
+      { "name": "Garden Level", "description": "Separate Entrance" }
+    ],
+    "nearbyPlaces": [
+      { "name": "Fort Greene Park", "distance": "0.2 miles", "type": "Park" },
+      { "name": "BAM", "distance": "0.4 miles", "type": "Arts" }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "High-Rise Apartment with Amenities",
+    "price": "$5,200/month",
+    "location": "Midtown, NY",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": "1,900 sq ft",
+    "type": "Rent",
+    "category": "High-Rise",
+    "featured": false,
+    "description": "Luxurious high-rise apartment with stunning views, premium amenities, and prime Midtown location. Perfect for those seeking the ultimate urban lifestyle.",
+    "yearBuilt": 2019,
+    "parking": 1,
+    "lotSize": "N/A",
+    "propertyTax": "N/A",
+    "hoaFees": "$800/month",
+    "images": [
+      "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    ],
+    "features": [
+      "Floor-to-ceiling windows",
+      "City and river views",
+      "Gourmet kitchen",
+      "Master suite with walk-in closet",
+      "In-unit washer/dryer"
+    ],
+    "amenities": [
+      { "name": "Concierge Service", "description": "24/7 Front Desk" },
+      { "name": "Fitness Center", "description": "State-of-the-art Gym" }
+    ],
+    "nearbyPlaces": [
+      { "name": "Times Square", "distance": "0.3 miles", "type": "Entertainment" },
+      { "name": "Bryant Park", "distance": "0.2 miles", "type": "Park" }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Waterfront Villa with Private Beach",
+    "price": "$5,500,000",
+    "location": "Hamptons, NY",
+    "bedrooms": 7,
+    "bathrooms": 5,
+    "area": "8,000 sq ft",
+    "type": "Sale",
+    "category": "Villa",
+    "featured": true,
+    "description": "Spectacular waterfront villa with private beach access, infinity pool, and panoramic ocean views. The ultimate luxury retreat in the prestigious Hamptons.",
+    "yearBuilt": 2017,
+    "parking": 4,
+    "lotSize": "2.5 acres",
+    "propertyTax": "$65,000/year",
+    "hoaFees": "N/A",
+    "images": [
+      "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    ],
+    "features": [
+      "Private beach access",
+      "Infinity pool and spa",
+      "Gourmet chef's kitchen",
+      "Master suite with ocean views",
+      "Home theater",
+      "Wine cellar"
+    ],
+    "amenities": [
+      { "name": "Private Beach", "description": "200ft of Beachfront" },
+      { "name": "Infinity Pool", "description": "Heated Pool & Spa" }
+    ],
+    "nearbyPlaces": [
+      { "name": "Private Beach", "distance": "0 miles", "type": "Beach" },
+      { "name": "Hamptons Golf Club", "distance": "1.2 miles", "type": "Golf" }
+    ]
+  }
+]
